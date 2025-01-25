@@ -1,0 +1,593 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-left a,
+    .navbar-right a {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+/* Navbar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    position: relative;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item::after {
+    content: "▼";
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        font-size: 14px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+}
+
+/* Header */
+
+
+
+
+
+
+
+
+
+/* Full Picture Bakground */
+
+.hero-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    background-image: url('https://img.freepik.com/free-photo/blue-wool-roll-orange_144627-20599.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+.hero-content {
+    margin-right: 100px;
+    word-spacing: 5px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: white;
+    color: black;
+}
+/* Full Picture Bakground */
+
+
+
+
+
+
+
+
+
+/* Products Section */
+
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product {
+    flex: 1 1 calc(25% - 15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 calc(100% - 15px);
+    }
+
+    .product img {
+        height: auto;
+    }
+}
+
+/* Products Section */
+
+
+
+
+
+
+
+
+
+
+/*Word map Section*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.left p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.left button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #1a1a1a;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.right {
+    flex: 1;
+    background-image: url('https://img.freepik.com/premium-vector/grey-world-map-with-white-background_197792-5252.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left,
+    .right {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .left h1 {
+        font-size: 1.8rem;
+    }
+
+    .left p {
+        font-size: 1rem;
+    }
+
+}
+/*Word map Section*/
+
+
+
+
+
+
+
+
+
+
+
+/* Featured Products*/
+
+.featured-products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.featured-products h2 {
+    margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 150px;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-button {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Featured Products*/
+
+
+
+
+
+
+
+
+
+/* Testimonials*/
+
+.testimonials {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    margin: 20px;
+    font-style: italic;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Testimonials*/
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #ffffff;
+    color: #333;
+    padding: 40px 20px;
+    border-top: 1.5px solid rgb(240, 239, 239);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    max-width: 210px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.newsletter {
+    text-align: left;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .newsletter {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .product img {
+        height: 120px;
+    }
+}
+
+/* Footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
